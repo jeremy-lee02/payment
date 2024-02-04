@@ -24,7 +24,7 @@ export default function Order (){
                 <h1 className='font-bold text-3xl'>Payment Status</h1>
                 <div className='flex flex-col items-start justify-center'>
                     <div>
-                    <p className='font-bold'>Amount: <span className=' font-normal'>{formatAmount(param.get('vnp_Amount'))}</span></p> 
+                    <p className='font-bold'>Amount: <span className=' font-normal'>{formatAmount(param.get('vnp_Amount'))} VND</span></p> 
                     </div>
                     <div>
                         <p className='font-bold'>Description: <span className=' font-normal'>{param.get('vnp_OrderInfo')}</span></p> 
