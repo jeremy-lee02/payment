@@ -4,7 +4,7 @@ import React from 'react'
 
 type Props = {}
 
-const Order = (props: Props) => {
+export default function Order (){
     const param = useSearchParams()
     function checkStatus(statusCode: string | null) {
         if(statusCode === '00') return "Success"
@@ -37,5 +37,3 @@ const Order = (props: Props) => {
         </div>
     )
 }
-
-export default Order
