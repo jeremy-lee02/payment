@@ -15,7 +15,8 @@ export default function Home() {
     const router = useRouter()
 
 
-    const handleCheckout = async () => {
+    const handleCheckout = async (e:any) => {
+      e.preventDefault()
       try {
         const res = await fetch('/api/create_payment_order', {
           method: 'POST',
@@ -47,7 +48,7 @@ export default function Home() {
     return (
       <div className="flex h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
         <h1 className="my-10 font-bold text-3xl">Payment Test</h1>
-        <form className="flex-col gap-4 items-center justify-center flex" onSubmit={handleCheckout}>
+        <form className="flex-col gap-4 items-center justify-center flex" onSubmit={(e) => handleCheckout(e)}>
           <div className="flex gap-3">
             <label htmlFor="amount" className="font-semibold text-xl">Amount: </label>
             <input 
