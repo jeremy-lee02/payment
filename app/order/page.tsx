@@ -12,9 +12,9 @@ export default function Order (){
     }
     
     return (
-        <div className="flex text-xl gap-4 h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
-            <h1 className='font-bold text-3xl'>Payment Status</h1>
-            <Suspense fallback={<>Loading...</>}>
+        <Suspense fallback={<>Loading...</>}>
+            <div className="flex text-xl gap-4 h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+                <h1 className='font-bold text-3xl'>Payment Status</h1>
                 <div className='flex flex-col items-start justify-center'>
                     <div>
                     <p className='font-bold'>Amount: <span className=' font-normal'>{param.get('vnp_Amount')}</span></p> 
@@ -34,9 +34,9 @@ export default function Order (){
 
                 </div>
 
-            </Suspense>
-            
+                
 
-        </div>
+            </div>
+        </Suspense>
     )
 }
